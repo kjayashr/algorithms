@@ -1,0 +1,109 @@
+package com.daily.code;
+import java.util.*;
+import java.util.ArrayList;
+public class Solutions {
+//Check if Unique
+    public static boolean allUnique(String s)
+    {
+        int[] frequency = new int[256];
+        for(int i = 0; i<s.length();i++) {
+            if (frequency[s.charAt(i)-'a']==0)
+            {
+                frequency[s.charAt(i)-'a']=1;
+                i++;
+            }
+             else
+                 return false;
+        }
+        return true;
+    }
+
+
+//Sliding Window
+    public static List<Integer> findAnagrams(String s, String p) {
+
+
+        ArrayList<Integer> soln = new ArrayList<Integer>();
+       if (s.length() == 0 || p.length() == 0 || s.length() < p.length()){
+            return new ArrayList<Integer>();
+        }
+        int[] chars = new int[26];
+        for (Character c : p.toCharArray()){
+            chars[c-'a']++;
+        }
+        int start = 0, end = 0, len = p.length(), diff = len;
+
+        char temp;
+
+        for (end = 0; end < len; end++){
+            temp = s.charAt(end);
+            chars[temp-'a']--;
+
+            if (chars[temp-'a'] >= 0){
+                diff--;
+            }
+        }
+
+        if (diff == 0){
+            soln.add(0);
+        }
+
+
+        while (end < s.length()){
+
+            temp = s.charAt(start);
+            if (chars[temp-'a'] >= 0){
+                diff++;
+            }
+
+            chars[temp-'a']++;
+            start++;
+
+
+            temp = s.charAt(end);
+
+            chars[temp-'a']--;
+            if (chars[temp-'a'] >= 0){
+                diff--;
+            }
+
+            if (diff == 0){
+                soln.add(start);
+            }
+
+            //Increment for next iteration
+            end++;
+
+        }
+
+        return soln;
+
+
+    }
+
+    //group anagrams
+    public List<List<String>> groupAnagrams(String[] strs) {
+   if (strs == null || strs.length == 0) return new ArrayList<List<String>>();
+        Map<String,List<String>> map = new HashMap<String,List<String>>();
+        for(String str:strs)
+        {
+            char[] sortedKey = str.toCharArray();
+            Arrays.sort(sortedKey);
+            String s = String.valueOf(sortedKey);
+            if(!map.containsKey(s))
+            {
+                map.put(s,new ArrayList<String>());
+            }
+            map.get(s).add(str);
+        }
+        return new ArrayList<List<String>>(map.values());
+    }
+
+
+    public static void main(String args[])
+    {
+
+    // System.out.println(allUnique("abcd"));
+       System.out.println(findAnagrams("abcde","cb"));
+    }
+}
