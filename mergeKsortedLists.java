@@ -10,16 +10,31 @@ class Solution {
 
       for(ListNode node:lists)
       {
-          while(node!=null)
-          {heap.add(node);node = node.next;}
+        /*  while(node!=null)
+          {heap.add(node);node = node.next;} 
+          
+          This is approach 1 where you just add a list to heap and then take it back.
+          We are not taking the advantage of list is sorted.
+          
+          
+          
+          
+          */
+          if(node!=null)
+              heap.add(node);
       }
           ListNode temp = new ListNode(0);
           ListNode head = temp;
     while(!heap.isEmpty())
     {
-        ListNode tempNode = heap.poll();
-        ListNode newNode = new ListNode(tempNode.val);
-        temp.next = newNode;
+        temp.next = heap.poll();
         temp = temp.next;
+        if(temp.next!=null)
+        {
+            heap.add(temp.next);
+        }
     }
+          
 return head.next;
+      } }       
+      
