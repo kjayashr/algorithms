@@ -6,6 +6,7 @@ Sort the array so that whenever A[i] is odd, i is odd; and whenever A[i] is even
 
 You may return any answer array that satisfies this condition.
 */
+/*last seen: 12/01/2018*/
 
 class Solution {
     public int[] sortArrayByParityII(int[] A) {
