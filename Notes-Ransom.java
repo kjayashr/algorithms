@@ -21,7 +21,7 @@ class Solution {
         return true;
     }
 }
-
+/*lastseen: 12/03/2018 */
 canConstruct("a", "b") -> false
 canConstruct("aa", "ab") -> false
 canConstruct("aa", "aab") -> true
