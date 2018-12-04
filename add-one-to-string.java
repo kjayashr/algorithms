@@ -1,3 +1,4 @@
+class Solution{
 public int[] plusOne(int[] digits) {
         
     int n = digits.length;
@@ -15,7 +16,8 @@ public int[] plusOne(int[] digits) {
     
     return newNumber;
 }
-
+}
+/*12/03/2018*/
 /* Adding 1 to String 
 [1,2,3]
 [1,2,4]
