@@ -10,6 +10,5 @@ public int maxArea(int[] height) {
 		else
 			right--;
 	}
-
 	return maxArea;
 }
