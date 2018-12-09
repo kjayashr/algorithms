@@ -18,5 +18,3 @@ public TreeNode helper(int[] num, int low, int high) {
     return node;
 }
 }
-
-/*LC108*/
