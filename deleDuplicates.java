@@ -1,5 +1,4 @@
-/*Input: 1->2->3->3->4->4->5
-Output: 1->2->5 */
+/*Input: 1->2->3->3->4->4->5 Output: 1->2->5 */
 
 public ListNode deleteDuplicates(ListNode head) {
         if(head==null) return null;
