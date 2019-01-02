@@ -21,3 +21,4 @@ public static int countBuildings(int num[])
    
    
    
+//easy
