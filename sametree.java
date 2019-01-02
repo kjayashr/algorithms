@@ -5,3 +5,4 @@ public boolean isSameTree(TreeNode p, TreeNode q) {
         return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
     return false;
 }
+//ls:01/02
