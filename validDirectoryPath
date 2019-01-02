@@ -9,3 +9,4 @@ public String simplifyPath(String path) {
     for (String dir : stack) res = "/" + dir + res;
     return res.isEmpty() ? "/" : res;
 }
+//ls02/01
