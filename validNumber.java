@@ -57,3 +57,4 @@ class Solution {
 /*LC 65 */
 
 
+//approach noted
