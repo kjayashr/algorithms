@@ -13,4 +13,4 @@ class Solution {
     }
     
 }
-//RomanToInteger
+//RomanToInteger current-2*previous
