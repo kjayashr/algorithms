@@ -9,3 +9,4 @@ public int removeDuplicates(int[] nums) {
     }
     return i + 1;
 }
+//saw similar problem
