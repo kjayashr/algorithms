@@ -13,3 +13,4 @@ public boolean isPalindrome(int x) {
     
     return q == x / 10 && p == x % 10;
 }
+//01/03
