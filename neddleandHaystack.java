@@ -25,3 +25,4 @@ Input: haystack = "hello", needle = "ll" Output: 2
       return -1;
     }
 }
+//enidu vichitra
