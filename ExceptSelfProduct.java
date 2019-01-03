@@ -13,3 +13,4 @@ public int[] productExceptSelf(int[] nums) {
     }
     return res;
 }
+//once from left and once from right
