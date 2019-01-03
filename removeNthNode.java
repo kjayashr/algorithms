@@ -15,3 +15,4 @@ public ListNode removeNthFromEnd(ListNode head, int n) {
     second.next = second.next.next;
     return dummy.next;
 }
+//easy. There could be multiple ways
