@@ -24,6 +24,4 @@ class Solution {
 /* Ransom Note 
 Magazine = "aaabded"
 Note= 'abd'
-
-Question will be if we can form the string with given notes.
 */
